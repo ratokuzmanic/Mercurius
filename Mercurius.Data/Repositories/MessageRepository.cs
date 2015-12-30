@@ -27,16 +27,16 @@ namespace Mercurius.Data.Repositories
 
         public void Create(Message newMessage)
         {
-            if (!DoesMessageExist(newMessage.Content))
+            if (!DoesMessageExist(newMessage))
                 _messageStorageService.AddItem(newMessage);
         }
 
-        private bool DoesMessageExist(string content)
+        private bool DoesMessageExist(Message newMessage)
         {
             var allMessages = GetAll();
 
             return allMessages
-                .Any(message => message.Content == content);
+                .Any(message => message.Equals(newMessage));
         }
     }
 }

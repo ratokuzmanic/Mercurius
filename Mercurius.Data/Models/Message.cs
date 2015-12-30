@@ -35,5 +35,19 @@ namespace Mercurius.Data.Models
             this.Timestamp                = timestamp;
             this.MessageStatus            = status;
         }
+
+        public bool Equals(Message otherMessage)
+        {
+            if
+            (
+                this.InterlocutorsPhoneNumber == otherMessage.InterlocutorsPhoneNumber &&
+                this.Content                  == otherMessage.Content                  &&
+                this.Timestamp                == otherMessage.Timestamp
+            )
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

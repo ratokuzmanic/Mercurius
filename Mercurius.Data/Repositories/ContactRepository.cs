@@ -20,16 +20,16 @@ namespace Mercurius.Data.Repositories
 
         public void Create(Contact newContact)
         {
-            if (!DoesContactExist(newContact.PhoneNumber))
+            if (!DoesContactExist(newContact))
                 _contactStorageService.AddItem(newContact);
         }
 
-        private bool DoesContactExist(string phoneNumber)
+        private bool DoesContactExist(Contact newContact)
         {
             var allContacts = GetAll(); 
 
             return allContacts
-                .Any(contact => contact.PhoneNumber == phoneNumber);
+                .Any(contact => contact.Equals(newContact));
         }
     }
 }

@@ -19,5 +19,14 @@ namespace Mercurius.Data.Models
             this.FullName    = fullName;
             this.PhoneNumber = phoneNumber;
         }
+        
+        public bool Equals(Contact otherContact)
+        {
+            if (this.PhoneNumber == otherContact.PhoneNumber)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
