@@ -5,11 +5,11 @@ namespace Mercurius.Infrastructure.Parsers
 {
     public static class LineFormattingDetails
     {
-        public static string Receiver       = "FN";
-        public static string PhoneNumber    = "TEL;CELL;";
-        public static string MessageStatus  = "X-IRMC-BOX";
-        public static string ReceiveTime    = "Date";
-        public static string Content        = "TEXT";
+        public static string InterlocutorsName        = "FN";
+        public static string InterlocutorsPhoneNumber = "TEL;CELL;";
+        public static string MessageStatus            = "X-IRMC-BOX";
+        public static string Timestamp                = "Date";
+        public static string Content                  = "TEXT";
 
         public static string DateTimeFormatting = "yyyy.M.d.H.m.s";
     }
@@ -26,11 +26,11 @@ namespace Mercurius.Infrastructure.Parsers
             {
                 var value = GetValue(line);
 
-                if (line.Contains(LineFormattingDetails.Receiver))
+                if (line.Contains(LineFormattingDetails.InterlocutorsName))
                 {
                     _messageBuilder.InterlocutorsName = QuotedPrintableParser.Parse(value);
                 }
-                else if (line.Contains(LineFormattingDetails.PhoneNumber))
+                else if (line.Contains(LineFormattingDetails.InterlocutorsPhoneNumber))
                 {
                     _messageBuilder.InterlocutorsPhoneNumber = StaticParsers.ParsePhoneNumber(value);
                 }
@@ -38,7 +38,7 @@ namespace Mercurius.Infrastructure.Parsers
                 {
                     _messageBuilder.MessageStatus = StaticParsers.ParseMessageStatus(value);
                 }
-                else if (line.Contains(LineFormattingDetails.ReceiveTime))
+                else if (line.Contains(LineFormattingDetails.Timestamp))
                 {
                     _messageBuilder.Timestamp = StaticParsers.ParseDateTime(value, LineFormattingDetails.DateTimeFormatting);
                 }
