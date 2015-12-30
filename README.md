@@ -19,4 +19,4 @@ Some of the high-level abstraction ideas that are implemented, more or less, inc
 
 Future ideas
 ------------
-Mercirus could benefit from localization and adding UI configuration options but at this point of time there is no implementation plan for aforementioned.
+Mercurius could benefit from localization and adding UI configuration options but at this point of time there is no implementation plan for aforementioned.
