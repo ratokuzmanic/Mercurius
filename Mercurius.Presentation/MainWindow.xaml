@@ -1,0 +1,48 @@
+﻿<Window x:Class="Mercurius.Presentation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Mercurius" Height="900" Width="1600" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFF2F2F5" FontSize="14.667" Icon="Resources/favicon.png">
+    <Grid>
+        <Rectangle Fill="#FF421C2F" HorizontalAlignment="Left" Height="871" Stroke="#FFF2F2F5" VerticalAlignment="Top" Width="212" Margin="-3,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="143" VerticalAlignment="Top" Width="158" Source="Resources/logo.png" Margin="27,21,0,0"/>
+        <ListBox ItemsSource="{Binding AllChats}" Margin="10,184,1391,82" BorderThickness="0" Background="#FF421C2F" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Foreground="#FFFFFF"><Run Text="{Binding InterlocutorName}" FontWeight="Bold" /><Run Text=" "/><Run Text="("/><Run Text="{Binding NumberOfMessages}" /><Run Text=")"/></TextBlock>
+                        <TextBlock Foreground="#FFFFFF" Grid.Row="1" Text="{Binding PhoneNumber}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <EventSetter Event="MouseDoubleClick" Handler="ContactItem_DoubleClick" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <ListBox ItemsSource="{Binding ActiveChat.Messages}" Margin="222,21,10,22" BorderThickness="0" Background="#FFF2F2F5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock>
+                            <Run Text="{Binding SendersName}" FontWeight="Bold" /><Run Text=" "/><Run Text=" | "/><Run Text=" "/><Run Text="{Binding Time}" />
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Text="{Binding Content}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Dodaj nove poruke" HorizontalAlignment="Left" Margin="10,806,0,22" Width="184" Click="UploadButton_Click"/>
+    </Grid>
+</Window>
