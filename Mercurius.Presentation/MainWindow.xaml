@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Mercurius" Height="900" Width="1600" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFF2F2F5" FontSize="14.667" Icon="Resources/favicon.png">
+        Title="Mercurius" Height="700" Width="1296" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Background="#FFF2F2F5" FontSize="14.667" Icon="Resources/favicon.png">
     <Grid>
-        <Rectangle Fill="#FF421C2F" HorizontalAlignment="Left" Height="871" Stroke="#FFF2F2F5" VerticalAlignment="Top" Width="212" Margin="-3,0,0,0"/>
-        <Image HorizontalAlignment="Left" Height="143" VerticalAlignment="Top" Width="158" Source="Resources/logo.png" Margin="27,21,0,0"/>
-        <ListBox ItemsSource="{Binding AllChats}" Margin="10,184,1391,82" BorderThickness="0" Background="#FF421C2F" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+        <Rectangle Fill="#FF421C2F" HorizontalAlignment="Left" Height="671" Stroke="#FFF2F2F5" VerticalAlignment="Top" Width="212" Margin="-3,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="155" Source="Resources/logo.png" Margin="30,21,0,0"/>
+        <ListBox ItemsSource="{Binding AllChats}" Margin="10,176,1096,81" BorderThickness="0" Background="#FF421C2F" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="2">
@@ -43,6 +43,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Dodaj nove poruke" HorizontalAlignment="Left" Margin="10,806,0,22" Width="184" Click="UploadButton_Click"/>
+        <Button Content="Dodaj nove poruke" HorizontalAlignment="Left" Margin="10,605,0,22" Width="184" Click="UploadButton_Click"/>
     </Grid>
 </Window>
