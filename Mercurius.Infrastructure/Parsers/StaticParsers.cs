@@ -11,7 +11,7 @@ namespace Mercurius.Infrastructure.Parsers
         {
             if (source.ElementAt(0) == '+')
             {
-                return "0" + source.Substring(source.IndexOf("+") + 4);
+                return "0" + source.Substring(4);
             }
             return source;
         }
