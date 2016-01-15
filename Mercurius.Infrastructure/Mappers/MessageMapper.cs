@@ -1,11 +1,11 @@
 ﻿using Mercurius.Main;
 
-using entity = Mercurius.Main.Models;
+using entity = Mercurius.Main.Entities;
 using data   = Mercurius.Data.Models;
 
 namespace Mercurius.Infrastructure.Mappers
 {
-    public class MessageMapper
+    public static class MessageMapper
     {
         public static entity::Message Map(data::Message message)
         {

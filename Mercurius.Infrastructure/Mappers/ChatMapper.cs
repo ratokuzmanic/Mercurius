@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 
-using entity = Mercurius.Main.Models;
+using entity = Mercurius.Main.Entities;
 using data   = Mercurius.Data.Models;
 
 namespace Mercurius.Infrastructure.Mappers
 {
-    public class ChatMapper
+    public static class ChatMapper
     {
         public static entity::Chat Map(data::Chat chat)
         {

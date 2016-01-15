@@ -1,9 +1,9 @@
-﻿using entity = Mercurius.Main.Models;
+﻿using entity = Mercurius.Main.Entities;
 using data   = Mercurius.Data.Models;
 
 namespace Mercurius.Infrastructure.Mappers
 {
-    public class ContactMapper
+    public static class ContactMapper
     {
         public static entity::Contact Map(data::Contact contact)
         {

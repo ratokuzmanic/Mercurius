@@ -2,11 +2,11 @@
 using Mercurius.Main;
 
 using client  = Mercurius.Presentation.ViewModel;
-using adaptee = Mercurius.Main.Models;
+using adaptee = Mercurius.Main.Entities;
 
 namespace Mercurius.Presentation.ViewModel
 {
-    public class Adapter
+    public static class Adapter
     {
         public static client::ViewModelMessage Request(adaptee::Message message)
         {
