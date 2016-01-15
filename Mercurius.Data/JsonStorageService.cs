@@ -11,8 +11,7 @@ namespace Mercurius.Data
 
         public JsonStorageService()
         {
-            var appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var dataPath = appPath ?? @"C:\";
+            var dataPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? @"C:\";
 
             var jsonFileName = typeof (T).Name + ".json";
 
