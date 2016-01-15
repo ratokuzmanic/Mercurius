@@ -1,5 +1,5 @@
 ﻿using Mercurius.Infrastructure.Builders;
-using Mercurius.Main.Models;
+using Mercurius.Main.Entities;
 
 namespace Mercurius.Infrastructure.Parsers
 {

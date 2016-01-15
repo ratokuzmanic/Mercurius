@@ -2,7 +2,7 @@
 using System.Linq;
 using Mercurius.Data.Repositories;
 using Mercurius.Infrastructure.Mappers;
-using Mercurius.Main.Models;
+using Mercurius.Main.Entities;
 
 namespace Mercurius.Infrastructure.Services
 {

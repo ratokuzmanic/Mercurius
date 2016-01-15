@@ -1,6 +1,6 @@
 ﻿using System;
 using Mercurius.Main;
-using Mercurius.Main.Models;
+using Mercurius.Main.Entities;
 
 namespace Mercurius.Infrastructure.Builders
 {

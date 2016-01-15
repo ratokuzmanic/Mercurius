@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Mercurius.Main.Models
+namespace Mercurius.Main.Entities
 {
     public class Chat
     {

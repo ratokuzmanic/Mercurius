@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Mercurius.Main.Models
+namespace Mercurius.Main.Entities
 {
     public class Message
     {

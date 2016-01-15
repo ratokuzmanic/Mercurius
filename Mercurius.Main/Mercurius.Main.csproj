@@ -41,9 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainEnums.cs" />
-    <Compile Include="Models\Chat.cs" />
-    <Compile Include="Models\Contact.cs" />
-    <Compile Include="Models\Message.cs" />
+    <Compile Include="Entities\Chat.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
